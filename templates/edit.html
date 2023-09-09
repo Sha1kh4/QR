@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>{{db.Name}</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+    
+<div class="flex justify-center items-center w-screen h-screen container mx-auto my-4 px-4 lg:px-20">
+    <div class="w-full p-8 my-4 md:px-12 lg:w-9/12 lg:pl-20 lg:pr-40 mr-auto rounded-2xl shadow-2xl">
+        <form name="contents" method="post">
+            <div class="flex">
+                <h1 class="font-bold uppercase text-5xl">Edit for {{db.name}} <br /> </h1>
+            </div>
+            <div class="grid grid-cols-1 gap-5 md:grid-cols-1 mt-5">
+                <label class="font-bold uppercase w-full  ">name:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" value="{{db.name}}" name="name /></label>
+                <label class="font-bold uppercase w-full  ">Position:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" value="{{db.position}" name="position /></label>
+                <label class="font-bold uppercase w-full  ">link to contact:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="url" value="{{db.contact}}" name="contact" /></label>
+                <label class="font-bold uppercase w-full  ">link to resume:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="url" value="{{db.resume}" name="resume /></label>
+                <label class="font-bold uppercase w-full  ">skill1:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" value="{{db.skill1}" name="skill1" /></label>
+                <label class="font-bold uppercase w-full  ">skill2:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" value="{{db.skill2}" name="skill2" /></label>
+                <label class="font-bold uppercase w-full  ">skill3:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" value="{{db.skill3}" name="skill3" /></label>
+                <label class="font-bold uppercase w-full  ">skill4:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" value="{{db.skill4}" name="skill4 /></label>
+                <label class="font-bold uppercase w-full  ">skill5:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="text" value="{{db.skill5}" name="skill5 /></label>
+            
+            </div>
+            <div class="my-4">
+                <label class="font-bold uppercase w-full  ">about:<textarea name="info" class="w-full h-32 bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline">{{db.about}}</textarea></label>
+            </div>
+            <label class="font-bold uppercase w-full  ">linkedin:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="url" value="{{db.linkedin}}" name="linkedin" /></label>
+            <label class="font-bold uppercase w-full  ">Facebook:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="url" value="{{db.fb}}" name="fb" /></label>
+            <label class="font-bold uppercase w-full  ">instagram:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="url" value="{{db.insta}" name="insta" /></label>
+            <label class="font-bold uppercase w-full  ">twitter:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="url" value="{{db.twt}" name="twt" /></label>
+            <label class="font-bold uppercase w-full  ">no. of Experiences:<input class="w-full bg-gray-100 text-gray-900 mt-2 p-3 rounded-lg focus:outline-none focus:shadow-outline" type="number" value="{{db.exp}}" name="exp" /></label>
+
+            <div class="my-2 w-1/2 lg:w-1/4">
+                <input type="submit" class="uppercase text-sm font-bold tracking-wide bg-blue-900 text-gray-100 p-3 rounded-lg w-full focus:outline-none focus:shadow-outline" value="update">
+            </div>
+        </form>
+
+    </div>
+</div></body>
+</html>

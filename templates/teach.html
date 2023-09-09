@@ -17,7 +17,7 @@
         <div class="col-span-4 sm:col-span-3">
           <div class="bg-white shadow rounded-lg p-6">
             <div class="flex flex-col items-center">
-              <img src="https://randomuser.me/api/portraits/men/64.jpg"
+              <img src="{{db.img}}"
                 class="w-32 h-32 bg-gray-300 rounded-full mb-4 shrink-0">
 
               </img>
@@ -33,9 +33,19 @@
               <span class="text-gray-600 uppercase font-bold tracking-wider mb-2">Skills</span>
               <ul>
                 <li class="mb-2">{{db.skill1}}</li>
+                {% if db.skill2 is not none %}
                 <li class="mb-2">{{db.skill2}}</li>
+                {% endif %}
+                {% if db.skill3 is not none %}
                 <li class="mb-2">{{db.skill3}}</li>
+                {% endif %}
+                {% if db.skill4 is not none %}
                 <li class="mb-2">{{db.skill4}}</li>
+                {% endif %}
+                {% if db.skill5 is not none %}
+                <li class="mb-2">{{db.skill5}}</li>
+                {% endif %}
+                
               </ul>
             </div>
           </div>
@@ -87,14 +97,30 @@
             <h2 class="text-xl font-bold mt-6 mb-4">Experience</h2>
             <div class="mb-6">
               <div class="flex justify-between">
-                <span class="text-gray-600 font-bold">{{db.exp1name}}</span>
+                <span class="text-gray-600 font-bold">{{ db.exp1name }}</span>
                 <p>
-                  <span class="text-gray-600 mr-2">{{db.exp1place}}</span>
-                  <span class="text-gray-600">{{db.exp1time}}</span>
+                  <span class="text-gray-600 mr-2">{{ db.exp1place }}</span>
+                  <span class="text-gray-600">{{ db.exp1time }}</span>
                 </p>
               </div>
-              <p class="mt-2">{{db.info}}
-              </p>
+            </div>
+            <p class="mt-2">{{db.exp1info}}
+            </p>
+            
+            {% for i in range(2, db.exp + 1) %}
+            <div class="mb-6">
+              <div class="flex justify-between">
+                <span class="text-gray-600 font-bold">{{ db['exp' + i|string + 'name'] }}</span>
+                <p>
+                  <span class="text-gray-600 mr-2">{{ db['exp' + i|string + 'place'] }}</span>
+                  <span class="text-gray-600">{{ db['exp' + i|string + 'time'] }}</span>
+                </p>
+              </div>
+            </div>
+            <p class="mt-2">{{db['exp' + i|string + 'info']}}
+            </p>
+            {% endfor %}            
+
             </div>
           </div>
         </div>
