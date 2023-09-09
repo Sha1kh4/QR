@@ -1,0 +1,29 @@
+-- @block
+CREATE TABLE `info`(
+  `no` int(11) NOT NULL,
+  `name` varchar(50) DEFAULT NULL,
+  `img` varchar(255) DEFAULT NULL,
+  `position` varchar(55) DEFAULT NULL,
+  `contact` varchar(55) DEFAULT NULL,
+  `resume` varchar(255) DEFAULT NULL,
+  `skill1` varchar(25) DEFAULT NULL,
+  `skill2` varchar(25) DEFAULT NULL,
+  `skill3` varchar(25) DEFAULT NULL,
+  `skill4` varchar(25) DEFAULT NULL,
+  `skill5` varchar(25) DEFAULT NULL,
+  `about` text ,
+  `linkedin` varchar(90) DEFAULT NULL,
+  `fb` varchar(55) DEFAULT NULL,
+  `insta` varchar(55) DEFAULT NULL,
+  `twt` varchar(55) DEFAULT NULL,
+  `exp` int(11) DEFAULT NULL,
+  `exp1name` varchar(95) DEFAULT NULL,
+  `exp1place` varchar(55) DEFAULT NULL,
+  `exp1time` varchar(25) DEFAULT NULL,
+  `exp1info` varchar(255) DEFAULT NULL
+);
+
+-- @block
+
+ INSERT INTO `info` (`no`, `img`, `position`, `contact`, `resume`, `skill1`, `skill2`, `skill3`, `skill4`, `skill5`, `about`, `linkedin`, `exp`, `exp1name`, `exp1place`, `exp1time`, `exp1info`, `name`, `insta`, `twt`, `fb`) VALUES
+(1, 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT_AlubbpWqdGsd8Fcqi4fp-E9kCFwD0eM1rdu1NeXTVe3q9R07', 'Professor ', 'mailto:malan@harvard.edu', 'https://cs.harvard.edu/malan/cv/malan.pdf', 'C++', 'GO', 'JAVA', 'PHP', 'Python', 'David J. Malan is Gordon McKay Professor of the Practice of Computer Science at Harvard University in the School of Engineering and Applied Sciences as well as a Member of the Faculty of Education in the Graduate School of Education. He teaches Computer Science 50, otherwise known as CS50, which is among Harvard University’s largest courses, one of Yale University’s largest courses, and edX’s largest MOOC, with over 5.1M registrants. He also teaches at Harvard Business School, Harvard Law School, Harvard Extension School, and Harvard Summer School. ', 'https://www.linkedin.com/in/malan/', 3, 'Lecturer', 'Tufts University', '2002-2005', 'Instructor for Computer Science 15: Data Structures, a second course for undergraduates. Managed staff of 10 teaching assistants', 'David J. Malan', 'https://www.instagram.com/davidjmalan/', 'https://twitter.com/davidjmalan', 'https://www.facebook.com/dmalan');
