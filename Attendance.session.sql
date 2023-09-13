@@ -50,11 +50,14 @@ CREATE TABLE experience(`id` int(11) NOT NULL AUTO_INCREMENT,
 -- @block
 INSERT INTO experience(`exp1name`, `exp1place`, `exp1time`, `exp1info`) VALUES( 'Lecturer', 'Tufts University', '2002-2005', 'Instructor for Computer Science 15: Data Structures, a second course for undergraduates. Managed staff of 10 teaching assistants');
 
--- @block
-UPDATE  experience SET exp2name='Founder', exp2place= 'Diskaster', exp2time='2005 – 2008', exp2info='Started company that offered professional recovery of data from hard drives and memory cards as
-well as forensic investigations for civil matters.' where id = 1;
-
 
 -- @block
 SELECT * FROM info;
 SELECT * FROM experience;
+
+--@block
+INSERT into login VALUES ("admin",1234);
+
+
+--@block
+SELECT * from login;
